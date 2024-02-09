@@ -1,25 +1,26 @@
 import React from 'react'
-import categoryCart from '@/components/CategoryCart'
+import CategoryCart from '@/components/CategoryCart'
+import sample from "../images/sample.jpg"
 
 const categories = [
-  { name: 'Grocecery', image: '~/images/sample.jpg' },
-  { name: 'Food', image: '~/images/sample.jpg' },
-  { name: 'Electronic', image: '~/images/sample.jpg' },
-  { name: 'Beauty', image: '~/images/sample.jpg' },
-  { name: 'Fashion', image: '~/images/sample.jpg' },
+  { name: 'Grocecery', image: sample },
+  { name: 'Food', image: sample },
+  { name: 'Electronic', image: sample },
+  { name: 'Beauty', image: sample },
+  { name: 'Fashion', image: sample },
+  { name: 'Vehicle', image: sample },
 ]
 
 function index() {
   return (
-    // <div>
-    //     {
-    //         categories.map((category)=>{
-    //             <CategoryCart/>
-    //         })
-    //     }
-    // </div>
     <>
-      Helloooo
+      <div className='flex flex-row gap-4 justify-center items-center'>
+        {
+          categories.map((category) => (
+            <CategoryCart name={category.name} image={category.image} />
+          ))
+        }
+      </div>
     </>
   )
 }
