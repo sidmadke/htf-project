@@ -15,6 +15,8 @@ import swiggy from "../images/swiggymart_logo.png"
 const fashionSearch = () => {
   const [name, setName] = useState('');
   const [priceArray,setPriceArray]= useState(0);
+  const [loader, setLoader] = useState(false)
+
 
   const handleChange = (event) => {
     setName(event.target.value);
@@ -54,11 +56,23 @@ const fashionSearch = () => {
               />
               <button onClick={handleSubmit}>Submit</button>
             </div>
-            {
-              priceArray ?
-              <><SearchnResult sampleResult={sampleResult} prices={priceArray}/></> : 
-              <></>
-            }
+            <>
+              {priceArray ?
+                <><SearchnResult sampleResult={sampleResult} prices={priceArray} /></> :
+                <div className={`flex flex-row justify-center items-center ${!loader ? `h-0` : `h-96`} bg-transparent`}>
+                  {loader &&
+                    <Triangle
+                      visible={true}
+                      height="150"
+                      width="150"
+                      color="#7f8f9c"
+                      ariaLabel="triangle-loading"
+                      wrapperStyle={{}}
+                      wrapperClass=""
+                    />}
+                </div>}
+            </>
+
           </div>
         </div>
         <div className='flex justify-center my-3'>

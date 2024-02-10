@@ -14,7 +14,7 @@ const categories = [
   { name: 'Electronic', image: elec, link: '/electronicSearch' },
   { name: 'Beauty', image: beauty, link: '/beautySearch' },
   { name: 'Fashion', image: fashion, link: '/fashionSearch' },
-  { name: 'Vehicle', image: car, link: '/vehicleSearch' },
+  // { name: 'Vehicle', image: car, link: '/vehicleSearch' },
   { name: 'Furniture', image: fur, link: '/furnitureSearch' },
 ]
 
