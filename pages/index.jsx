@@ -1,6 +1,6 @@
 import React from 'react'
 import CategoryCart from '@/components/CategoryCart'
-import food from "../images/burger_image.png"
+import food from "../images/grocery_logo.png"
 import elec from "../images/electronic_image.png"
 import beauty from "../images/beauty_img.png"
 import fashion from "../images/fashion_image.png"
@@ -10,8 +10,7 @@ import LeftLanding from '@/components/LeftLanding'
 import Navbar from '@/components/Navbar'
 
 const categories = [
-  // { name: 'Grocecery', image: grocery, link: '/grocecerySearch' },
-  { name: 'Food', image: food, link: '/foodSearch' },
+  { name: 'Grocery', image: food, link: '/grocerySearch' },
   { name: 'Electronic', image: elec, link: '/electronicSearch' },
   { name: 'Beauty', image: beauty, link: '/beautySearch' },
   { name: 'Fashion', image: fashion, link: '/fashionSearch' },

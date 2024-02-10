@@ -6,13 +6,9 @@ import search from '../images/search_icon.png';
 import SearchnResult from '@/components/SearchnResult';
 import amazon from "../images/amazon_logo.png";
 import flipkart from "../images/flipkart_logo.png";
-import nykaa from "../images/nyka_logo.png";
-import myntra from "../images/myntra_logo.png";
-import ajio from "../images/ajio_logo.png";
 import axios from 'axios'
 
-const beautySearch = () => {
-
+const furnitureSearch = () => {
   const [name, setName] = useState('');
   const [priceArray,setPriceArray]= useState(0);
 
@@ -21,24 +17,19 @@ const beautySearch = () => {
   };
 
   const sampleResult = [
-    { logo: ajio, price: priceArray[0] , link: 'https://www.ajio.com/', slink: 'https://www.ajio.com/' },
-    { logo: amazon, price: priceArray[1] , link: 'https://www.amazon.in/', slink: 'https://www.amazon.in/' },
-    { logo: flipkart, price: priceArray[2] , link: 'https://www.flipkart.com/', slink: 'https://www.flipkart.com/' },
-    { logo: myntra, price: priceArray[3] , link: 'https://www.myntra.com/', slink: 'https://www.myntra.com/' },
-    { logo: nykaa, price: priceArray[4] , link: 'https://www.nykaa.com/sp/new-customers-mweb/new-customers?pagetitle=new-customers-mweb&utm_content=ads&utm_source=GooglePaid&utm_medium=search&utm_campaign=Search_Nykaa_NCA&hlp=hlpa&gad_source=1&gclid=CjwKCAiA2pyuBhBKEiwApLaIOz8tDjsZ0V-C-1Fz3jtSbUUg_gKewLHUfcrywjco_hSkfqgkiG-H8xoCL24QAvD_BwE', slink: 'https://www.nykaa.com/' },
-  ];
+    { logo: amazon, price: priceArray[0], link: 'https://www.amazon.in/',slink:'https://www.amazon.in/'},
+    { logo: flipkart, price: priceArray[1], link: 'https://www.flipkart.com/',slink: 'https://www.flipkart.com/'},
+  ]
 
   const handleSubmit = async () => {
     try {
-      const response = await axios.post(`http://localhost:4000/beauty?productName=${name}`);
+      const response = await axios.post(`http://localhost:4000/furniture?productName=${name}`);
       console.log(response.data.prices);
       setPriceArray(response.data.prices)
     } catch (error) {
       console.log('Error occurred while making the request:', error);
     }
   };
-  
-  
 
   return (
     <div className='gradient-background h-[100vh]'>
@@ -54,11 +45,13 @@ const beautySearch = () => {
                 value={name}
                 onChange={handleChange}
               />
-              <button onClick={handleSubmit} className='bg-[#7f8f9c]'>Submit</button>
+              <button onClick={handleSubmit}>Submit</button>
             </div>
-
-            <SearchnResult sampleResult={sampleResult} prices={priceArray}/>
-
+            {
+              priceArray ?
+              <><SearchnResult sampleResult={sampleResult} prices={priceArray}/></> : 
+              <></>
+            }
           </div>
         </div>
         <div className='flex justify-center my-3'>
@@ -66,7 +59,7 @@ const beautySearch = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default beautySearch;
+export default furnitureSearch

@@ -4,9 +4,9 @@ import logo from "../images/logo.png"
 
 const Navbar = () => {
   return (
-    <>
-        <Image src={logo} height={150} width={150}/>
-    </>
+    <div className='px-6'>
+        <Image src={logo} height={190} width={190}/>
+    </div>
   )
 }
 
