@@ -1,6 +1,6 @@
 import React from 'react'
 import PriceCard from './PriceCard'
-import SampleLogo from '../images/Zomato_logo.png'
+import SampleLogo from '../images/zomato_logo.jpeg'
 
 const sampleResult=[
     {logo:SampleLogo, price:251},

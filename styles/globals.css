@@ -28,3 +28,18 @@ body {
   }
 }
 
+::-webkit-scrollbar{
+  width: 5px;
+}
+::-webkit-scrollbar-track{
+  background-color: rgb(131, 130, 130);
+}
+::-webkit-scrollbar-thumb{
+  background-color: #3a3a3a;
+  border-radius: 50px;
+}
+
+.gradient-background {
+  background: linear-gradient(to right, #999999, #F2F2F2);
+}
+
