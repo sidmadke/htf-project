@@ -24,16 +24,16 @@ const PriceCard = (props) => {
 
         </tbody>
       </table> */}
-      <div className='grid grid-cols-3 w-full'>
-        <div className='col-span-1 h-16 px-4 flex justify-center items-center'>
+      <div className='grid grid-cols-12 w-full'>
+        <div className='col-span-3 h-16 px-4 flex justify-center items-center'>
           <div className='flex justify-center items-center'>
             <Image src={props.logo}  alt='Logo' height={130} width={130} />
           </div>
         </div>
-        <div className='col-span-1 h-16 px-4 flex justify-center items-center text-center text-2xl underline underline-offset-2'>
+        <div className='col-span-6 h-16 px-4 flex justify-center items-center text-center text-2xl underline underline-offset-2'>
           <a href={props.link} target='_blank'>{props.slink}</a>
         </div>
-        <div className='col-span-1 h-16 flex justify-center items-center text-xl font-semibold'>
+        <div className='col-span-3 h-16 flex justify-center items-center text-xl font-semibold'>
           <span className='text-black bg-[#D9D9D9] px-4 py-3 rounded-3xl'>
             {props.price}/- Rs.
           </span>
