@@ -10,7 +10,7 @@ const SearchnResult = (props) => {
     return (
         <div className='flex flex-col gap-9 my-10'>
             {sampleResult.map((result) => (
-                <PriceCard logo={result.logo} price={result.price} link={result.link} slink={result.slink} />
+                <PriceCard key={result.link} logo={result.logo} price={result.price} link={result.link} slink={result.slink} />
             ))}
         </div>
     )

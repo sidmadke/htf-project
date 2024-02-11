@@ -31,7 +31,7 @@ function index() {
         <div className='w-[50%] flex flex-row flex-wrap gap-8 justify-center items-center m-8 z-50'>
           {
             categories.map((category) => (
-              <CategoryCart name={category.name} image={category.image} link={category.link} />
+              <CategoryCart key={category.name} name={category.name} image={category.image} link={category.link} />
             ))
           }
         </div>

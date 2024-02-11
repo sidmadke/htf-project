@@ -10,8 +10,9 @@ import nykaa from "../images/nyka_logo.png";
 import myntra from "../images/myntra_logo.png";
 import ajio from "../images/ajio_logo.png";
 import axios from 'axios'
+import { Triangle } from 'react-loader-spinner';
 
-const beautySearch = () => {
+const BeautySearch = () => {
 
   const [name, setName] = useState('');
   const [priceArray,setPriceArray]= useState(0);
@@ -49,7 +50,7 @@ const beautySearch = () => {
         <div className='flex justify-center p-6'>
           <div className='bg-[#C1C5CD] w-[40%] rounded-3xl '>
             <div className='bg-[#7f8f9c] h-20 text-gray-700 text-2xl rounded-3xl flex items-center px-5 gap-8'>
-              <Image src={search} className='h-10 w-10' />
+              <Image src={search} className='h-10 w-10' alt='image'/>
               <input
                 type="text"
                 placeholder='Search product'
@@ -78,7 +79,7 @@ const beautySearch = () => {
             
             <div className='bg-[#7f8f9c] h-20 text-gray-700 text-2xl rounded-3xl flex items-center px-5 gap-8 justify-between'>
               <div className='flex items-center gap-8'>
-                <Image src={search} className='h-10 w-10' />
+                <Image src={search} className='h-10 w-10' alt='image' />
                 <input
                   type="text"
                   placeholder='Search product'
@@ -106,4 +107,4 @@ const beautySearch = () => {
   );
 };
 
-export default beautySearch;
+export default BeautySearch;

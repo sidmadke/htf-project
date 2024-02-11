@@ -7,8 +7,9 @@ import SearchnResult from '@/components/SearchnResult';
 import amazon from "../images/amazon_logo.png";
 import flipkart from "../images/flipkart_logo.png";
 import axios from 'axios'
+import { Triangle } from 'react-loader-spinner';
 
-const furnitureSearch = () => {
+const FurnitureSearch = () => {
   const [name, setName] = useState('');
   const [priceArray,setPriceArray]= useState(0);
   const [loader, setLoader] = useState(false)
@@ -80,4 +81,4 @@ const furnitureSearch = () => {
   )
 }
 
-export default furnitureSearch
+export default FurnitureSearch

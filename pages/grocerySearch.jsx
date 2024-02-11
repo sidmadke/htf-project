@@ -11,7 +11,7 @@ import swiggy from "../images/swiggymart_logo.png"
 import { Triangle } from 'react-loader-spinner';
 
 
-const grocerySearch = () => {
+const GrocerySearch = () => {
   const [name, setName] = useState('');
   const [priceArray, setPriceArray] = useState(0);
   const [loader, setLoader] = useState(false)
@@ -84,4 +84,4 @@ const grocerySearch = () => {
   )
 }
 
-export default grocerySearch
+export default GrocerySearch

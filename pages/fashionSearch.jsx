@@ -11,8 +11,9 @@ import myntra from "../images/myntra_logo.png";
 import axios from 'axios'
 import ajio from "../images/ajio_logo.png";
 import swiggy from "../images/swiggymart_logo.png"
+import { Triangle } from 'react-loader-spinner';
 
-const fashionSearch = () => {
+const FashionSearch = () => {
   const [name, setName] = useState('');
   const [priceArray,setPriceArray]= useState(0);
   const [loader, setLoader] = useState(false)
@@ -87,4 +88,4 @@ const fashionSearch = () => {
   )
 }
 
-export default fashionSearch
+export default FashionSearch
