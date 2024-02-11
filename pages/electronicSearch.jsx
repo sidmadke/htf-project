@@ -27,7 +27,7 @@ const ElectronicSearch = () => {
   const handleSubmit = async () => {
     try {
       setLoader(true)
-      const response = await axios.post(`http://localhost:4000/electronics?productName=${name}`);
+      const response = await axios.post(`https://htf-backend.onrender.com/electronics?productName=${name}`);
       console.log(response.data.prices);
       setPriceArray(response.data.prices)
       setLoader(false)
